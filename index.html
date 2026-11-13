@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="page">
+        <header class="top-header">
+            <div class="logo">✦ EXCHANGE<span> HUB</span></div>
+            <div class="live-status">
+                <span class="live-dot"></span> Currency Exchange
+            </div>
+        </header>
+
+        <section class="hero">
+            <p class="tagline">YOUR MONEY, WITHOUT BORDERS</p>
+            <h1>Currency <span>Converter.</span></h1>
+            <p class="description">
+                Convert currencies around the world with the latest
+                available exchange rates.
+            </p>
+        </section>
+
+        <section class="converter-card">
+
+            <div class="card-heading">
+                <div>
+                    <h2>Currency Exchange</h2>
+                    <p>Choose your currencies and enter an amount.</p>
+                </div>
+                <div class="exchange-icon">↗</div>
+            </div>
+
+            <label for="amount">Amount to convert</label>
+            <div class="amount-box">
+                <span class="amount-symbol">₹</span>
+                <input type="number" id="amount"
+                    value="100" min="0.01" step="any">
+            </div>
+
+            <div class="currency-row">
+
+                <div class="currency-field">
+                    <label for="fromCurrency">FROM</label>
+                    <div class="select-box">
+                        <span id="fromFlag">🇮🇳</span>
+                        <select id="fromCurrency"></select>
+                    </div>
+                </div>
+
+                <button class="swap-btn" id="swapBtn"
+                    aria-label="Swap currencies">⇄</button>
+
+                <div class="currency-field">
+                    <label for="toCurrency">TO</label>
+                    <div class="select-box">
+                        <span id="toFlag">🇺🇸</span>
+                        <select id="toCurrency"></select>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="convert-btn" id="convertBtn">
+                Convert Currency <span>→</span>
+            </button>
+
+            <div class="result-card">
+                <p class="result-label">CONVERTED AMOUNT</p>
+                <h2 id="result">Loading...</h2>
+                <p id="rate">Your exchange rate will appear here.</p>
+            </div>
+
+            <div class="status" id="status" aria-live="polite">
+                Ready to convert
+            </div>
+
+            <div class="bottom-info">
+                <span>✦ Simple</span>
+                <span>✦ Fast</span>
+                <span>✦ Worldwide</span>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Designed with ♥ | Global Currency Converter</p>
+            <p>Powered by ExchangeRate API</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
